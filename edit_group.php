@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 if (!isset($_SESSION['login']))
 {
   header("Location: 404.php");
@@ -45,13 +47,8 @@ if (isset($_POST['submit'])) {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <title>Изменить данные группы</title>
+<?php require "header.php" ?>
+<title>Изменить данные группы</title>
 </head>
 <body>
 
@@ -95,5 +92,6 @@ if (isset($_POST['submit'])) {
     </form>
   </div>
 </form>
+<?php require "footer.php" ?>
 </body>
 </html>
