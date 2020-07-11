@@ -14,9 +14,9 @@ require_once "db.php";
 $group_id = mysqli_real_escape_string($connection ,$_GET['group_id']);
 if (isset($_POST['submit'])) {
   //$group_id = mysqli_real_escape_string($connection ,$_GET['group_id']);
-  $fio= $_POST['FIO'];
-  $age = $_POST['age'];
-  $sex = $_POST['sex'];
+  $fio= mysqli_real_escape_string($connection ,$_POST['FIO']);
+  $age = mysqli_real_escape_string($connection ,$_POST['age']);
+  $sex = mysqli_real_escape_string($connection ,$_POST['sex']);
   $query = "INSERT INTO student(FIO, age, sex, group_id)";
   $query .= "VALUES (";
   $query .= "'{$fio}', {$age}, {$sex}, {$group_id})";

@@ -9,7 +9,7 @@ if (!isset($_SESSION['login']))
 require_once "db.php";
 if (isset($_POST['submit']))
 {
-  $Name= $_POST['Name'];
+  $Name= mysqli_real_escape_string($connection ,$_POST['Name']);
   $query = "INSERT INTO groups(Name)" . " ";
   $query .= "VALUES (";
   $query .= "'{$Name}')";

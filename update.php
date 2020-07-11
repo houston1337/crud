@@ -31,9 +31,9 @@ if (isset($_GET['id']) && !empty($_GET['id']))
 
 if (isset($_POST['submit'])) {
   $id = mysqli_real_escape_string($connection ,$_GET['id']);
-  $fio= $_POST['FIO'];
-  $age = $_POST['age'];
-  $sex = $_POST['sex'];
+  $fio= mysqli_real_escape_string($connection ,$_POST['FIO']);
+  $age =mysqli_real_escape_string($connection ,$_POST['age']);
+  $sex = mysqli_real_escape_string($connection ,$_POST['sex']);
   $query = "UPDATE student SET" . " ";
   $query .= "FIO = '{$fio}', ";
   $query .= "age = {$age}, ";

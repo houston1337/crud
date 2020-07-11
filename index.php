@@ -2,7 +2,7 @@
 session_start();
 require_once "db.php";
 
-$query = "SELECT * FROM groups";
+$query = "SELECT groups.*, COUNT(student.group_id) AS gi FROM groups LEFT JOIN student ON groups.id=student.group_id GROUP BY groups.Name";
 $req = mysqli_query($connection,$query);
 $query_quantity_student = "SELECT COUNT(*) FROM student WHERE group_id=";
 
@@ -41,9 +41,7 @@ $query_quantity_student = "SELECT COUNT(*) FROM student WHERE group_id=";
               </th>
               <th>
                 <?php
-                $req_quantity_student = mysqli_query($connection,$query_quantity_student . $resp['id'] );
-                $resp_quantity_student = mysqli_fetch_assoc($req_quantity_student);
-                echo $resp_quantity_student['COUNT(*)'];
+                echo $resp['gi'];
                 ?>
               </th>
               <?php if(isset($_SESSION['login'])): ?>

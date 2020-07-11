@@ -29,7 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id']))
 
 if (isset($_POST['submit'])) {
   $id = mysqli_real_escape_string($connection ,$_GET['id']);
-  $Name= $_POST['Name'];
+  $Name= mysqli_real_escape_string($connection ,$_POST['Name']);
   $query = "UPDATE groups SET" . " ";
   $query .= "Name = '{$Name}'";
   $query .= " ". "WHERE id=" . $id;
