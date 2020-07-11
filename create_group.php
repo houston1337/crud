@@ -22,14 +22,11 @@ if (isset($_POST['submit']))
     die("ERROR. NOT CREATED");
   }
 }
-
+$title = "Добавить группу";
 ?>
 
 <?php require "header.php" ?>
-<title>Добавить группу</title>
-</head>
 <body>
-
   <div class="navbar navbar-light bg-light d-flex justify-content-betweenr">
     <div class="p-2">
       <a href="index.php" title="Вернуться на главную" class="text-muted" style="text-decoration: none">

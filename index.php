@@ -5,13 +5,12 @@ require_once "db.php";
 $query = "SELECT groups.*, COUNT(student.group_id) AS gi FROM groups LEFT JOIN student ON groups.id=student.group_id GROUP BY groups.Name";
 $req = mysqli_query($connection,$query);
 $query_quantity_student = "SELECT COUNT(*) FROM student WHERE group_id=";
-
+$title = "Группы";
 ?>
 
 <?php require "header.php" ?>
 
-<title>Группы</title>
-</head>
+
 <body>
   <div class="navbar navbar-light bg-light">
     <h1 class="p-2">Группы</h1>

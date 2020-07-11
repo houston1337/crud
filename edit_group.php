@@ -43,13 +43,8 @@ if (isset($_POST['submit'])) {
     die("ERROR. NOT CHANGED");
   }
 }
-
-?>
-
-
-<?php require "header.php" ?>
-<title>Изменить данные группы</title>
-</head>
+$title = "Изменить данные группы";
+require "header.php"; ?>
 <body>
 
   <div class="navbar navbar-light bg-light d-flex justify-content-betweenr">

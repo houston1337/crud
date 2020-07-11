@@ -49,17 +49,10 @@ if (isset($_POST['submit'])) {
     die("ERROR. NOT CHANGED");
   }
 }
-
-?>
-
-<?php require "header.php" ?>
-<title>Изменить данные студента</title>
-</head>
+$title = "Изменить данные студента";
+ require "header.php"; ?>
 <body>
-
-
   <div class="navbar navbar-light bg-light d-flex justify-content-betweenr">
-
     <div class="p-2">
       <a href="student.php?group_id=<?php echo $group_id; ?>" style="text-decoration: none" class="text-muted" title="Вернуться к списку студентов">
         <svg width="2em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

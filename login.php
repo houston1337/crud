@@ -25,12 +25,8 @@ if (isset($_SESSION['login']))
 {
   header("Location: index.php");
 }
-
-?>
-
-
-<?php require "header.php" ?>
-<title>Login</title>
+$title = "Login";
+require "header.php" ?>
 </head>
 <body>
   <div class="navbar navbar-light bg-light d-flex justify-content-betweenr">

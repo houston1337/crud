@@ -30,12 +30,8 @@ if (isset($_POST['submit'])) {
     die("ERROR. NOT CREATED");
   }
 }
-
-?>
-
-<?php require "header.php" ?>
-<title>Добавить студента</title>
-</head>
+$title = "Добавить студента";
+require "header.php" ?>
 <body>
 
   <div class="navbar navbar-light bg-light d-flex justify-content-betweenr">
